@@ -1,3 +1,8 @@
+import os
+import openai
+
+os.environ["OPENAI_API_KEY"] = "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"
+
 import json
 import logging
 

@@ -31,19 +31,19 @@ install: create-venv upgrade-pip install-dependencies install-pre-commit farewel
 #Defines a target named create-venv. This target will create a virtual environment in the venv folder.
 create-venv:
 	@echo -e "$(COLOR_CYAN)Creating virtual environment...$(COLOR_RESET)" && \
-	python -m venv venv
+	python3 -m venv venv
 
 #Defines a target named upgrade-pip. This target will upgrade pip to the latest version.
 upgrade-pip:
 	@echo -e "$(COLOR_CYAN)Upgrading pip...$(COLOR_RESET)" && \
 	source venv/bin/activate && \
-	pip install --upgrade pip >> /dev/null
+	pip3 install --upgrade pip >> /dev/null
 
 #Defines a target named install-dependencies. This target will install the dependencies.
 install-dependencies:
 	@echo -e "$(COLOR_CYAN)Installing dependencies...$(COLOR_RESET)" && \
 	source venv/bin/activate && \
-	pip install -e . >> /dev/null
+	pip3 install -e . >> /dev/null
 
 #Defines a target named install-pre-commit. This target will install the pre-commit hooks.
 install-pre-commit:
